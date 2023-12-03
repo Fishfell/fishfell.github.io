@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>查询系统</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    #managementInterface {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>查询系统</h1>
-    <form action="/search" method="get">
-        <label for="search">输入关键词：</label>
-        <input type="text" id="search" name="keyword">
-        <button type="submit">搜索</button>
+  <input type="text" placeholder="请输入您要查询的词条">
+  <button onclick="search()">查询</button>
+
+  <div id="searchResult">
+    <!-- 查询结果显示的地方 -->
+  </div>
+
+  <div id="managementInterface">
+    <input type="password" placeholder="请输入密码">
+    <button onclick="showAddEntryForm()">进入管理界面</button>
+    <form id="addEntryForm" style="display: none;">
+      <input type="text" placeholder="输入要添加的词条">
+      <button type="submit">添加词条</button>
     </form>
+  </div>
+
+  <script>
+    function search() {
+      // 实现查询功能
+    }
+
+    function showAddEntryForm() {
+      // 检查密码并显示添加词条表单
+    }
+  </script>
 </body>
 </html>
